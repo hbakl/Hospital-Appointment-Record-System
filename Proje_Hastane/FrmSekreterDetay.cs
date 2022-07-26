@@ -16,5 +16,10 @@ namespace Proje_Hastane
         {
             InitializeComponent();
         }
+
+        private void FrmSekreterDetay_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
