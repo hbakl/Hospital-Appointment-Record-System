@@ -31,7 +31,12 @@ namespace Proje_Hastane
             komut.ExecuteNonQuery();
             bgl.baglanti().Close();
             MessageBox.Show("Kaydınız gerçekleşmiştir. Şifreniz:"+TxtSifre.Text,"Bilgi",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            this.Hide();
 
+        }
+
+        private void FrmHastaKayit_Load(object sender, EventArgs e)
+        {
 
         }
     }
