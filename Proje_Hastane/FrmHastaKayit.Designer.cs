@@ -49,7 +49,7 @@
             this.TxtSifre.Location = new System.Drawing.Point(179, 202);
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.Size = new System.Drawing.Size(146, 36);
-            this.TxtSifre.TabIndex = 8;
+            this.TxtSifre.TabIndex = 5;
             // 
             // MskTC
             // 
@@ -57,7 +57,7 @@
             this.MskTC.Mask = "00000000000";
             this.MskTC.Name = "MskTC";
             this.MskTC.Size = new System.Drawing.Size(146, 36);
-            this.MskTC.TabIndex = 7;
+            this.MskTC.TabIndex = 3;
             // 
             // label3
             // 
@@ -82,7 +82,7 @@
             this.TxtSoyad.Location = new System.Drawing.Point(179, 70);
             this.TxtSoyad.Name = "TxtSoyad";
             this.TxtSoyad.Size = new System.Drawing.Size(146, 36);
-            this.TxtSoyad.TabIndex = 10;
+            this.TxtSoyad.TabIndex = 2;
             // 
             // label1
             // 
@@ -98,7 +98,7 @@
             this.TxtAd.Location = new System.Drawing.Point(179, 28);
             this.TxtAd.Name = "TxtAd";
             this.TxtAd.Size = new System.Drawing.Size(146, 36);
-            this.TxtAd.TabIndex = 12;
+            this.TxtAd.TabIndex = 1;
             // 
             // label4
             // 
@@ -124,7 +124,7 @@
             this.MskTelefon.Mask = "(999) 000-0000";
             this.MskTelefon.Name = "MskTelefon";
             this.MskTelefon.Size = new System.Drawing.Size(146, 36);
-            this.MskTelefon.TabIndex = 16;
+            this.MskTelefon.TabIndex = 4;
             // 
             // label6
             // 
@@ -144,21 +144,24 @@
             this.CmbCinsiyet.Location = new System.Drawing.Point(179, 244);
             this.CmbCinsiyet.Name = "CmbCinsiyet";
             this.CmbCinsiyet.Size = new System.Drawing.Size(146, 36);
-            this.CmbCinsiyet.TabIndex = 17;
+            this.CmbCinsiyet.TabIndex = 6;
             // 
             // BtnKayitYap
             // 
             this.BtnKayitYap.Location = new System.Drawing.Point(179, 286);
             this.BtnKayitYap.Name = "BtnKayitYap";
             this.BtnKayitYap.Size = new System.Drawing.Size(146, 52);
-            this.BtnKayitYap.TabIndex = 18;
+            this.BtnKayitYap.TabIndex = 7;
             this.BtnKayitYap.Text = "Kaydol";
             this.BtnKayitYap.UseVisualStyleBackColor = true;
+            this.BtnKayitYap.Click += new System.EventHandler(this.BtnKayitYap_Click);
             // 
             // FrmHastaKayit
             // 
+            this.AcceptButton = this.BtnKayitYap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(343, 364);
             this.Controls.Add(this.BtnKayitYap);
             this.Controls.Add(this.CmbCinsiyet);
@@ -176,6 +179,7 @@
             this.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmHastaKayit";
             this.Text = "Hasta Kayıt Paneli";
             this.ResumeLayout(false);
