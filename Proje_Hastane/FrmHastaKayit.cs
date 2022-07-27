@@ -21,6 +21,7 @@ namespace Proje_Hastane
         sqlbaglantisi bgl = new sqlbaglantisi();
         private void BtnKayitYap_Click(object sender, EventArgs e)
         {
+            //Yeni hasta kaydı yapan kod kısmı
             SqlCommand komut = new SqlCommand("insert into Tbl_Hastalar (HastaAd,HastaSoyad,HastaTC,HastaTelefon,HastaSifre,HastaCinsiyet) values (@p1,@p2,@p3,@p4,@p5,@p6)",bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", TxtAd.Text);
             komut.Parameters.AddWithValue("@p2", TxtSoyad.Text);

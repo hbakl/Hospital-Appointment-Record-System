@@ -28,6 +28,7 @@ namespace Proje_Hastane
 
         private void BtnGirisYap_Click(object sender, EventArgs e)
         {
+            //Giriş için tc ve şifre kontrolü yapan kod kısmı
             SqlCommand komut = new SqlCommand("Select * From Tbl_Hastalar Where HastaTC=@p1 and HastaSifre=@p2", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", MskTC.Text);
             komut.Parameters.AddWithValue("@p2", TxtSifre.Text);
@@ -35,6 +36,7 @@ namespace Proje_Hastane
             if(dr.Read())
             {
                 FrmHastaDetay fr = new FrmHastaDetay();
+                fr.tc = MskTC.Text;
                 fr.Show();
                 this.Hide();
             }
