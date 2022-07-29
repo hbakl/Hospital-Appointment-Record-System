@@ -52,7 +52,7 @@ namespace Proje_Hastane
 
         private void CmbBrans_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //branşı seçince doktor isimlerini getiren kod kısmı
+            //branşı seçince doktor isimlerini getiren kod kısmıhf
             CmbDoktor.Items.Clear();
             SqlCommand komut3 = new SqlCommand("Select DoktorAd,DoktorSoyad From Tbl_Doktorlar where DoktorBrans=@p1", bgl.baglanti());
             komut3.Parameters.AddWithValue("@p1", CmbBrans.Text);
@@ -62,6 +62,15 @@ namespace Proje_Hastane
                 CmbDoktor.Items.Add(dr3[0] + " " + dr3[1]);
             }
             bgl.baglanti().Close();
+        }
+
+        private void CmbDoktor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //doktorun aktif randevularını gösteren kod kısmı
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Tbl_Randevular where RandevuBrans='" + CmbBrans.Text + "'", bgl.baglanti());
+            da.Fill(dt);
+            dataGridView2.DataSource = dt;
         }
     }
 }
