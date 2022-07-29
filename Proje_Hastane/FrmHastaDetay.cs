@@ -72,5 +72,12 @@ namespace Proje_Hastane
             da.Fill(dt);
             dataGridView2.DataSource = dt;
         }
+
+        private void LnkBilgiDuzenle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmBilgiDuzenle fr = new FrmBilgiDuzenle();
+            fr.TCno = LblTC.Text;
+            fr.Show();
+        }
     }
 }

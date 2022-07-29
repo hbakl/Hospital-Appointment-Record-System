@@ -80,6 +80,7 @@
             this.LnkBilgiDuzenle.TabIndex = 8;
             this.LnkBilgiDuzenle.TabStop = true;
             this.LnkBilgiDuzenle.Text = "Bilgilerini Düzenle";
+            this.LnkBilgiDuzenle.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkBilgiDuzenle_LinkClicked);
             // 
             // LblAdSoyad
             // 
