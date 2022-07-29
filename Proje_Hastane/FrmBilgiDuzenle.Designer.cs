@@ -162,6 +162,7 @@
             this.AcceptButton = this.BtnBilgiGuncelle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(343, 332);
             this.Controls.Add(this.BtnBilgiGuncelle);
             this.Controls.Add(this.CmbCinsiyet);
@@ -179,6 +180,7 @@
             this.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmBilgiDuzenle";
             this.Text = "Bilgi Güncelle";
             this.Load += new System.EventHandler(this.FrmBilgiDuzenle_Load);

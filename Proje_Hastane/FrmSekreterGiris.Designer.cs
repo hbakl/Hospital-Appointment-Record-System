@@ -42,16 +42,17 @@
             this.BtnGirisYap.Location = new System.Drawing.Point(190, 161);
             this.BtnGirisYap.Name = "BtnGirisYap";
             this.BtnGirisYap.Size = new System.Drawing.Size(146, 47);
-            this.BtnGirisYap.TabIndex = 13;
+            this.BtnGirisYap.TabIndex = 3;
             this.BtnGirisYap.Text = "Giriş Yap";
             this.BtnGirisYap.UseVisualStyleBackColor = true;
+            this.BtnGirisYap.Click += new System.EventHandler(this.BtnGirisYap_Click);
             // 
             // TxtSifre
             // 
             this.TxtSifre.Location = new System.Drawing.Point(190, 108);
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.Size = new System.Drawing.Size(146, 36);
-            this.TxtSifre.TabIndex = 11;
+            this.TxtSifre.TabIndex = 2;
             // 
             // MskTC
             // 
@@ -59,7 +60,7 @@
             this.MskTC.Mask = "00000000000";
             this.MskTC.Name = "MskTC";
             this.MskTC.Size = new System.Drawing.Size(146, 36);
-            this.MskTC.TabIndex = 10;
+            this.MskTC.TabIndex = 1;
             // 
             // label3
             // 
@@ -91,8 +92,10 @@
             // 
             // FrmSekreterGiris
             // 
+            this.AcceptButton = this.BtnGirisYap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(364, 226);
             this.Controls.Add(this.BtnGirisYap);
             this.Controls.Add(this.TxtSifre);
@@ -103,6 +106,7 @@
             this.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmSekreterGiris";
             this.Text = "Sekreter Giriş Ekranı";
             this.ResumeLayout(false);
