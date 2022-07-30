@@ -33,6 +33,13 @@ namespace Proje_Hastane
                 LblAdSoyad.Text = dr[0].ToString();
             }
             bgl.baglanti().Close();
+
+
+            //branşları aktarma
+            DataTable dt1 = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("select Bransad from Tbl_Branslar", bgl.baglanti());
+            da.Fill(dt1);
+            dataGridView1.DataSource = dt1;
             
         }
     }
