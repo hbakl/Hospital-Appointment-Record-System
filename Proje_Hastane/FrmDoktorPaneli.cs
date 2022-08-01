@@ -69,5 +69,20 @@ namespace Proje_Hastane
             TxtSifre.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
 
         }
+
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("Delete from Tbl_Doktorlar where DoktorTC=@p1", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", MskTC.Text);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Kayıt silindi","Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+
+            //Doktorları gridviewe aktaran kodlar
+            DataTable dt1 = new DataTable();
+            SqlDataAdapter da1 = new SqlDataAdapter("Select * From Tbl_Doktorlar", bgl.baglanti());
+            da1.Fill(dt1);
+            dataGridView1.DataSource = dt1;
+        }
     }
 }
