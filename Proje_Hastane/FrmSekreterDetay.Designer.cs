@@ -41,12 +41,12 @@
             this.BtnGuncelle = new System.Windows.Forms.Button();
             this.BtnKaydet = new System.Windows.Forms.Button();
             this.ChkDurum = new System.Windows.Forms.CheckBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.mskTc = new System.Windows.Forms.MaskedTextBox();
+            this.cmbDoktor = new System.Windows.Forms.ComboBox();
+            this.cmbBrans = new System.Windows.Forms.ComboBox();
+            this.mskSaat = new System.Windows.Forms.MaskedTextBox();
+            this.mskTarih = new System.Windows.Forms.MaskedTextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -153,12 +153,12 @@
             this.groupBox3.Controls.Add(this.BtnGuncelle);
             this.groupBox3.Controls.Add(this.BtnKaydet);
             this.groupBox3.Controls.Add(this.ChkDurum);
-            this.groupBox3.Controls.Add(this.maskedTextBox3);
-            this.groupBox3.Controls.Add(this.comboBox2);
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(this.maskedTextBox2);
-            this.groupBox3.Controls.Add(this.maskedTextBox1);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.mskTc);
+            this.groupBox3.Controls.Add(this.cmbDoktor);
+            this.groupBox3.Controls.Add(this.cmbBrans);
+            this.groupBox3.Controls.Add(this.mskSaat);
+            this.groupBox3.Controls.Add(this.mskTarih);
+            this.groupBox3.Controls.Add(this.txtId);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label8);
@@ -189,6 +189,7 @@
             this.BtnKaydet.TabIndex = 2;
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.UseVisualStyleBackColor = true;
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // ChkDurum
             // 
@@ -200,54 +201,55 @@
             this.ChkDurum.Text = "Durum";
             this.ChkDurum.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox3
+            // mskTc
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(112, 248);
-            this.maskedTextBox3.Mask = "00000000000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(200, 36);
-            this.maskedTextBox3.TabIndex = 13;
+            this.mskTc.Location = new System.Drawing.Point(112, 248);
+            this.mskTc.Mask = "00000000000";
+            this.mskTc.Name = "mskTc";
+            this.mskTc.Size = new System.Drawing.Size(200, 36);
+            this.mskTc.TabIndex = 13;
             // 
-            // comboBox2
+            // cmbDoktor
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(112, 206);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 36);
-            this.comboBox2.TabIndex = 12;
+            this.cmbDoktor.FormattingEnabled = true;
+            this.cmbDoktor.Location = new System.Drawing.Point(112, 206);
+            this.cmbDoktor.Name = "cmbDoktor";
+            this.cmbDoktor.Size = new System.Drawing.Size(200, 36);
+            this.cmbDoktor.TabIndex = 12;
             // 
-            // comboBox1
+            // cmbBrans
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 164);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 36);
-            this.comboBox1.TabIndex = 11;
+            this.cmbBrans.FormattingEnabled = true;
+            this.cmbBrans.Location = new System.Drawing.Point(112, 164);
+            this.cmbBrans.Name = "cmbBrans";
+            this.cmbBrans.Size = new System.Drawing.Size(200, 36);
+            this.cmbBrans.TabIndex = 11;
+            this.cmbBrans.SelectedIndexChanged += new System.EventHandler(this.cmbBrans_SelectedIndexChanged);
             // 
-            // maskedTextBox2
+            // mskSaat
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(112, 122);
-            this.maskedTextBox2.Mask = "00:00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(200, 36);
-            this.maskedTextBox2.TabIndex = 10;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            this.mskSaat.Location = new System.Drawing.Point(112, 122);
+            this.mskSaat.Mask = "00:00";
+            this.mskSaat.Name = "mskSaat";
+            this.mskSaat.Size = new System.Drawing.Size(200, 36);
+            this.mskSaat.TabIndex = 10;
+            this.mskSaat.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox1
+            // mskTarih
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(112, 80);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(200, 36);
-            this.maskedTextBox1.TabIndex = 9;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.mskTarih.Location = new System.Drawing.Point(112, 80);
+            this.mskTarih.Mask = "00/00/0000";
+            this.mskTarih.Name = "mskTarih";
+            this.mskTarih.Size = new System.Drawing.Size(200, 36);
+            this.mskTarih.TabIndex = 9;
+            this.mskTarih.ValidatingType = typeof(System.DateTime);
             // 
-            // textBox1
+            // txtId
             // 
-            this.textBox1.Location = new System.Drawing.Point(112, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 36);
-            this.textBox1.TabIndex = 8;
+            this.txtId.Location = new System.Drawing.Point(112, 38);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(200, 36);
+            this.txtId.TabIndex = 8;
             // 
             // label10
             // 
@@ -429,12 +431,12 @@
         private System.Windows.Forms.Button BtnGuncelle;
         private System.Windows.Forms.Button BtnKaydet;
         private System.Windows.Forms.CheckBox ChkDurum;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.MaskedTextBox mskTc;
+        private System.Windows.Forms.ComboBox cmbDoktor;
+        private System.Windows.Forms.ComboBox cmbBrans;
+        private System.Windows.Forms.MaskedTextBox mskSaat;
+        private System.Windows.Forms.MaskedTextBox mskTarih;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
