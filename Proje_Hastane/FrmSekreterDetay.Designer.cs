@@ -139,6 +139,7 @@
             this.BtnDuyuruOlustur.TabIndex = 1;
             this.BtnDuyuruOlustur.Text = "Duyuru Oluştur";
             this.BtnDuyuruOlustur.UseVisualStyleBackColor = true;
+            this.BtnDuyuruOlustur.Click += new System.EventHandler(this.BtnDuyuruOlustur_Click);
             // 
             // RchDuyuru
             // 
