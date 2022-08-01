@@ -98,5 +98,13 @@ namespace Proje_Hastane
             bgl.baglanti().Close();
             MessageBox.Show("Duyuru başarıyla oluşturuldu.");
         }
+
+        private void BtnDoktorPanel_Click(object sender, EventArgs e)
+        {
+            //Doktor paneline geçiş yapacak kodlar
+            FrmDoktorPaneli drp = new FrmDoktorPaneli();
+            drp.Show();
+
+        }
     }
 }

@@ -136,7 +136,7 @@
             this.BtnDuyuruOlustur.Location = new System.Drawing.Point(6, 233);
             this.BtnDuyuruOlustur.Name = "BtnDuyuruOlustur";
             this.BtnDuyuruOlustur.Size = new System.Drawing.Size(325, 53);
-            this.BtnDuyuruOlustur.TabIndex = 1;
+            this.BtnDuyuruOlustur.TabIndex = 3;
             this.BtnDuyuruOlustur.Text = "Duyuru Oluştur";
             this.BtnDuyuruOlustur.UseVisualStyleBackColor = true;
             this.BtnDuyuruOlustur.Click += new System.EventHandler(this.BtnDuyuruOlustur_Click);
@@ -146,7 +146,7 @@
             this.RchDuyuru.Location = new System.Drawing.Point(6, 35);
             this.RchDuyuru.Name = "RchDuyuru";
             this.RchDuyuru.Size = new System.Drawing.Size(325, 192);
-            this.RchDuyuru.TabIndex = 0;
+            this.RchDuyuru.TabIndex = 2;
             this.RchDuyuru.Text = "";
             // 
             // groupBox3
@@ -169,7 +169,7 @@
             this.groupBox3.Location = new System.Drawing.Point(355, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(318, 442);
-            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Randevu Paneli";
             // 
@@ -178,7 +178,7 @@
             this.BtnGuncelle.Location = new System.Drawing.Point(6, 388);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.Size = new System.Drawing.Size(306, 43);
-            this.BtnGuncelle.TabIndex = 15;
+            this.BtnGuncelle.TabIndex = 13;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
             // 
@@ -187,7 +187,7 @@
             this.BtnKaydet.Location = new System.Drawing.Point(6, 339);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(306, 43);
-            this.BtnKaydet.TabIndex = 2;
+            this.BtnKaydet.TabIndex = 12;
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.UseVisualStyleBackColor = true;
             this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
@@ -198,7 +198,7 @@
             this.ChkDurum.Location = new System.Drawing.Point(112, 300);
             this.ChkDurum.Name = "ChkDurum";
             this.ChkDurum.Size = new System.Drawing.Size(103, 33);
-            this.ChkDurum.TabIndex = 14;
+            this.ChkDurum.TabIndex = 11;
             this.ChkDurum.Text = "Durum";
             this.ChkDurum.UseVisualStyleBackColor = true;
             // 
@@ -208,7 +208,7 @@
             this.mskTc.Mask = "00000000000";
             this.mskTc.Name = "mskTc";
             this.mskTc.Size = new System.Drawing.Size(200, 36);
-            this.mskTc.TabIndex = 13;
+            this.mskTc.TabIndex = 10;
             // 
             // cmbDoktor
             // 
@@ -216,7 +216,7 @@
             this.cmbDoktor.Location = new System.Drawing.Point(112, 206);
             this.cmbDoktor.Name = "cmbDoktor";
             this.cmbDoktor.Size = new System.Drawing.Size(200, 36);
-            this.cmbDoktor.TabIndex = 12;
+            this.cmbDoktor.TabIndex = 9;
             // 
             // cmbBrans
             // 
@@ -224,7 +224,7 @@
             this.cmbBrans.Location = new System.Drawing.Point(112, 164);
             this.cmbBrans.Name = "cmbBrans";
             this.cmbBrans.Size = new System.Drawing.Size(200, 36);
-            this.cmbBrans.TabIndex = 11;
+            this.cmbBrans.TabIndex = 8;
             this.cmbBrans.SelectedIndexChanged += new System.EventHandler(this.cmbBrans_SelectedIndexChanged);
             // 
             // mskSaat
@@ -233,7 +233,7 @@
             this.mskSaat.Mask = "00:00";
             this.mskSaat.Name = "mskSaat";
             this.mskSaat.Size = new System.Drawing.Size(200, 36);
-            this.mskSaat.TabIndex = 10;
+            this.mskSaat.TabIndex = 7;
             this.mskSaat.ValidatingType = typeof(System.DateTime);
             // 
             // mskTarih
@@ -242,7 +242,7 @@
             this.mskTarih.Mask = "00/00/0000";
             this.mskTarih.Name = "mskTarih";
             this.mskTarih.Size = new System.Drawing.Size(200, 36);
-            this.mskTarih.TabIndex = 9;
+            this.mskTarih.TabIndex = 6;
             this.mskTarih.ValidatingType = typeof(System.DateTime);
             // 
             // txtId
@@ -250,7 +250,7 @@
             this.txtId.Location = new System.Drawing.Point(112, 38);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(200, 36);
-            this.txtId.TabIndex = 8;
+            this.txtId.TabIndex = 5;
             // 
             // label10
             // 
@@ -325,7 +325,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(498, 249);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabIndex = 18;
             // 
             // groupBox5
             // 
@@ -346,7 +346,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(498, 248);
-            this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.TabIndex = 19;
             // 
             // groupBox6
             // 
@@ -356,7 +356,7 @@
             this.groupBox6.Location = new System.Drawing.Point(12, 460);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(661, 125);
-            this.groupBox6.TabIndex = 5;
+            this.groupBox6.TabIndex = 14;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Hızlı Erişim";
             // 
@@ -365,7 +365,7 @@
             this.BtnListe.Location = new System.Drawing.Point(302, 35);
             this.BtnListe.Name = "BtnListe";
             this.BtnListe.Size = new System.Drawing.Size(142, 75);
-            this.BtnListe.TabIndex = 2;
+            this.BtnListe.TabIndex = 17;
             this.BtnListe.Text = "Randevu Listesi";
             this.BtnListe.UseVisualStyleBackColor = true;
             // 
@@ -374,7 +374,7 @@
             this.BtnBransPanel.Location = new System.Drawing.Point(154, 35);
             this.BtnBransPanel.Name = "BtnBransPanel";
             this.BtnBransPanel.Size = new System.Drawing.Size(142, 75);
-            this.BtnBransPanel.TabIndex = 1;
+            this.BtnBransPanel.TabIndex = 16;
             this.BtnBransPanel.Text = "Branş Paneli";
             this.BtnBransPanel.UseVisualStyleBackColor = true;
             // 
@@ -383,9 +383,10 @@
             this.BtnDoktorPanel.Location = new System.Drawing.Point(6, 35);
             this.BtnDoktorPanel.Name = "BtnDoktorPanel";
             this.BtnDoktorPanel.Size = new System.Drawing.Size(142, 75);
-            this.BtnDoktorPanel.TabIndex = 0;
+            this.BtnDoktorPanel.TabIndex = 15;
             this.BtnDoktorPanel.Text = "Doktor Paneli";
             this.BtnDoktorPanel.UseVisualStyleBackColor = true;
+            this.BtnDoktorPanel.Click += new System.EventHandler(this.BtnDoktorPanel_Click);
             // 
             // FrmSekreterDetay
             // 

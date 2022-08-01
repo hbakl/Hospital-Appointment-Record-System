@@ -52,14 +52,14 @@
             this.CmbBrans.Location = new System.Drawing.Point(131, 120);
             this.CmbBrans.Name = "CmbBrans";
             this.CmbBrans.Size = new System.Drawing.Size(200, 36);
-            this.CmbBrans.TabIndex = 14;
+            this.CmbBrans.TabIndex = 3;
             // 
             // TxtAd
             // 
             this.TxtAd.Location = new System.Drawing.Point(131, 12);
             this.TxtAd.Name = "TxtAd";
             this.TxtAd.Size = new System.Drawing.Size(200, 36);
-            this.TxtAd.TabIndex = 13;
+            this.TxtAd.TabIndex = 1;
             // 
             // label1
             // 
@@ -85,7 +85,7 @@
             this.MskTC.Mask = "00000000000";
             this.MskTC.Name = "MskTC";
             this.MskTC.Size = new System.Drawing.Size(200, 36);
-            this.MskTC.TabIndex = 16;
+            this.MskTC.TabIndex = 4;
             // 
             // label3
             // 
@@ -101,7 +101,7 @@
             this.TxtSoyad.Location = new System.Drawing.Point(131, 65);
             this.TxtSoyad.Name = "TxtSoyad";
             this.TxtSoyad.Size = new System.Drawing.Size(200, 36);
-            this.TxtSoyad.TabIndex = 18;
+            this.TxtSoyad.TabIndex = 2;
             // 
             // label4
             // 
@@ -117,7 +117,7 @@
             this.TxtSifre.Location = new System.Drawing.Point(131, 232);
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.Size = new System.Drawing.Size(200, 36);
-            this.TxtSifre.TabIndex = 21;
+            this.TxtSifre.TabIndex = 5;
             // 
             // label5
             // 
@@ -130,6 +130,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(366, 12);
             this.dataGridView1.Name = "dataGridView1";
@@ -142,16 +143,17 @@
             this.BtnEkle.Location = new System.Drawing.Point(11, 282);
             this.BtnEkle.Name = "BtnEkle";
             this.BtnEkle.Size = new System.Drawing.Size(98, 50);
-            this.BtnEkle.TabIndex = 23;
+            this.BtnEkle.TabIndex = 6;
             this.BtnEkle.Text = "Ekle";
             this.BtnEkle.UseVisualStyleBackColor = true;
+            this.BtnEkle.Click += new System.EventHandler(this.BtnEkle_Click);
             // 
             // BtnSil
             // 
             this.BtnSil.Location = new System.Drawing.Point(115, 282);
             this.BtnSil.Name = "BtnSil";
             this.BtnSil.Size = new System.Drawing.Size(98, 50);
-            this.BtnSil.TabIndex = 24;
+            this.BtnSil.TabIndex = 7;
             this.BtnSil.Text = "Sil";
             this.BtnSil.UseVisualStyleBackColor = true;
             // 
@@ -160,7 +162,7 @@
             this.BtnGuncelle.Location = new System.Drawing.Point(219, 282);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.Size = new System.Drawing.Size(112, 50);
-            this.BtnGuncelle.TabIndex = 25;
+            this.BtnGuncelle.TabIndex = 8;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
             // 
@@ -188,6 +190,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmDoktorPaneli";
             this.Text = "Doktor Paneli";
+            this.Load += new System.EventHandler(this.FrmDoktorPaneli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
