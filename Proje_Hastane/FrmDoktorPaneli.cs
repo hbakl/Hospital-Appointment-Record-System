@@ -57,5 +57,17 @@ namespace Proje_Hastane
             da1.Fill(dt1);
             dataGridView1.DataSource = dt1;
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //DataGridView'de tıklanan satırdaki bilgileri doktor kayıt kısmına aktaran kodlar
+            int secilen = dataGridView1.SelectedCells[0].RowIndex;
+            TxtAd.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+            TxtSoyad.Text= dataGridView1.Rows[secilen].Cells[2].Value.ToString();
+            CmbBrans.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+            MskTC.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
+            TxtSifre.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
+
+        }
     }
 }
