@@ -30,37 +30,37 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSekreterDetay));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.LblTC = new System.Windows.Forms.Label();
             this.LblAdSoyad = new System.Windows.Forms.Label();
+            this.LblTC = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.RchDuyuru = new System.Windows.Forms.RichTextBox();
             this.BtnDuyuruOlustur = new System.Windows.Forms.Button();
+            this.RchDuyuru = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.ChkDurum = new System.Windows.Forms.CheckBox();
-            this.BtnKaydet = new System.Windows.Forms.Button();
             this.BtnGuncelle = new System.Windows.Forms.Button();
+            this.BtnKaydet = new System.Windows.Forms.Button();
+            this.ChkDurum = new System.Windows.Forms.CheckBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.BtnDoktorPanel = new System.Windows.Forms.Button();
-            this.BtnBransPanel = new System.Windows.Forms.Button();
             this.BtnListe = new System.Windows.Forms.Button();
+            this.BtnBransPanel = new System.Windows.Forms.Button();
+            this.BtnDoktorPanel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -84,23 +84,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sekreter Bilgisi";
             // 
-            // label1
+            // LblAdSoyad
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "T.C. No:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 29);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ad Soyad:";
+            this.LblAdSoyad.AutoSize = true;
+            this.LblAdSoyad.Location = new System.Drawing.Point(144, 83);
+            this.LblAdSoyad.Name = "LblAdSoyad";
+            this.LblAdSoyad.Size = new System.Drawing.Size(100, 29);
+            this.LblAdSoyad.TabIndex = 3;
+            this.LblAdSoyad.Text = "Null Null";
             // 
             // LblTC
             // 
@@ -111,14 +102,23 @@
             this.LblTC.TabIndex = 2;
             this.LblTC.Text = "00000000000";
             // 
-            // LblAdSoyad
+            // label2
             // 
-            this.LblAdSoyad.AutoSize = true;
-            this.LblAdSoyad.Location = new System.Drawing.Point(144, 83);
-            this.LblAdSoyad.Name = "LblAdSoyad";
-            this.LblAdSoyad.Size = new System.Drawing.Size(100, 29);
-            this.LblAdSoyad.TabIndex = 3;
-            this.LblAdSoyad.Text = "Null Null";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(24, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(114, 29);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Ad Soyad:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(47, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "T.C. No:";
             // 
             // groupBox2
             // 
@@ -131,14 +131,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Duyuru Oluştur";
             // 
-            // RchDuyuru
-            // 
-            this.RchDuyuru.Location = new System.Drawing.Point(6, 35);
-            this.RchDuyuru.Name = "RchDuyuru";
-            this.RchDuyuru.Size = new System.Drawing.Size(325, 192);
-            this.RchDuyuru.TabIndex = 0;
-            this.RchDuyuru.Text = "";
-            // 
             // BtnDuyuruOlustur
             // 
             this.BtnDuyuruOlustur.Location = new System.Drawing.Point(6, 233);
@@ -147,6 +139,14 @@
             this.BtnDuyuruOlustur.TabIndex = 1;
             this.BtnDuyuruOlustur.Text = "Duyuru Oluştur";
             this.BtnDuyuruOlustur.UseVisualStyleBackColor = true;
+            // 
+            // RchDuyuru
+            // 
+            this.RchDuyuru.Location = new System.Drawing.Point(6, 35);
+            this.RchDuyuru.Name = "RchDuyuru";
+            this.RchDuyuru.Size = new System.Drawing.Size(325, 192);
+            this.RchDuyuru.TabIndex = 0;
+            this.RchDuyuru.Text = "";
             // 
             // groupBox3
             // 
@@ -172,108 +172,23 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Randevu Paneli";
             // 
-            // label5
+            // BtnGuncelle
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(68, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 29);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Id:";
+            this.BtnGuncelle.Location = new System.Drawing.Point(6, 388);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.Size = new System.Drawing.Size(306, 43);
+            this.BtnGuncelle.TabIndex = 15;
+            this.BtnGuncelle.Text = "Güncelle";
+            this.BtnGuncelle.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // BtnKaydet
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(39, 80);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 29);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Tarih:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(42, 125);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 29);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Saat:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(30, 171);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 29);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Branş:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 209);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 29);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Doktor:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(56, 251);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 29);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "T.C:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(112, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 36);
-            this.textBox1.TabIndex = 8;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(112, 80);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(200, 36);
-            this.maskedTextBox1.TabIndex = 9;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(112, 122);
-            this.maskedTextBox2.Mask = "00:00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(200, 36);
-            this.maskedTextBox2.TabIndex = 10;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 164);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 36);
-            this.comboBox1.TabIndex = 11;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(112, 206);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 36);
-            this.comboBox2.TabIndex = 12;
-            // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(112, 248);
-            this.maskedTextBox3.Mask = "00000000000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(200, 36);
-            this.maskedTextBox3.TabIndex = 13;
+            this.BtnKaydet.Location = new System.Drawing.Point(6, 339);
+            this.BtnKaydet.Name = "BtnKaydet";
+            this.BtnKaydet.Size = new System.Drawing.Size(306, 43);
+            this.BtnKaydet.TabIndex = 2;
+            this.BtnKaydet.Text = "Kaydet";
+            this.BtnKaydet.UseVisualStyleBackColor = true;
             // 
             // ChkDurum
             // 
@@ -285,23 +200,108 @@
             this.ChkDurum.Text = "Durum";
             this.ChkDurum.UseVisualStyleBackColor = true;
             // 
-            // BtnKaydet
+            // maskedTextBox3
             // 
-            this.BtnKaydet.Location = new System.Drawing.Point(6, 339);
-            this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(306, 43);
-            this.BtnKaydet.TabIndex = 2;
-            this.BtnKaydet.Text = "Kaydet";
-            this.BtnKaydet.UseVisualStyleBackColor = true;
+            this.maskedTextBox3.Location = new System.Drawing.Point(112, 248);
+            this.maskedTextBox3.Mask = "00000000000";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(200, 36);
+            this.maskedTextBox3.TabIndex = 13;
             // 
-            // BtnGuncelle
+            // comboBox2
             // 
-            this.BtnGuncelle.Location = new System.Drawing.Point(6, 388);
-            this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(306, 43);
-            this.BtnGuncelle.TabIndex = 15;
-            this.BtnGuncelle.Text = "Güncelle";
-            this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(112, 206);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(200, 36);
+            this.comboBox2.TabIndex = 12;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(112, 164);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 36);
+            this.comboBox1.TabIndex = 11;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(112, 122);
+            this.maskedTextBox2.Mask = "00:00";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(200, 36);
+            this.maskedTextBox2.TabIndex = 10;
+            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(112, 80);
+            this.maskedTextBox1.Mask = "00/00/0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(200, 36);
+            this.maskedTextBox1.TabIndex = 9;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(112, 38);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 36);
+            this.textBox1.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(56, 251);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 29);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "T.C:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(17, 209);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 29);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Doktor:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(30, 171);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 29);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Branş:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(42, 125);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 29);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Saat:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(39, 80);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 29);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Tarih:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(68, 41);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 29);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Id:";
             // 
             // groupBox4
             // 
@@ -315,6 +315,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 32);
@@ -335,6 +336,7 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 32);
@@ -355,14 +357,14 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Hızlı Erişim";
             // 
-            // BtnDoktorPanel
+            // BtnListe
             // 
-            this.BtnDoktorPanel.Location = new System.Drawing.Point(6, 35);
-            this.BtnDoktorPanel.Name = "BtnDoktorPanel";
-            this.BtnDoktorPanel.Size = new System.Drawing.Size(142, 75);
-            this.BtnDoktorPanel.TabIndex = 0;
-            this.BtnDoktorPanel.Text = "Doktor Paneli";
-            this.BtnDoktorPanel.UseVisualStyleBackColor = true;
+            this.BtnListe.Location = new System.Drawing.Point(302, 35);
+            this.BtnListe.Name = "BtnListe";
+            this.BtnListe.Size = new System.Drawing.Size(142, 75);
+            this.BtnListe.TabIndex = 2;
+            this.BtnListe.Text = "Randevu Listesi";
+            this.BtnListe.UseVisualStyleBackColor = true;
             // 
             // BtnBransPanel
             // 
@@ -373,14 +375,14 @@
             this.BtnBransPanel.Text = "Branş Paneli";
             this.BtnBransPanel.UseVisualStyleBackColor = true;
             // 
-            // BtnListe
+            // BtnDoktorPanel
             // 
-            this.BtnListe.Location = new System.Drawing.Point(302, 35);
-            this.BtnListe.Name = "BtnListe";
-            this.BtnListe.Size = new System.Drawing.Size(142, 75);
-            this.BtnListe.TabIndex = 2;
-            this.BtnListe.Text = "Randevu Listesi";
-            this.BtnListe.UseVisualStyleBackColor = true;
+            this.BtnDoktorPanel.Location = new System.Drawing.Point(6, 35);
+            this.BtnDoktorPanel.Name = "BtnDoktorPanel";
+            this.BtnDoktorPanel.Size = new System.Drawing.Size(142, 75);
+            this.BtnDoktorPanel.TabIndex = 0;
+            this.BtnDoktorPanel.Text = "Doktor Paneli";
+            this.BtnDoktorPanel.UseVisualStyleBackColor = true;
             // 
             // FrmSekreterDetay
             // 

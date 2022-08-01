@@ -37,10 +37,16 @@ namespace Proje_Hastane
 
             //branşları aktarma
             DataTable dt1 = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select Bransad from Tbl_Branslar", bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("select BransID as 'Branş No', BransAd as 'Branş Adı' from Tbl_Branslar", bgl.baglanti());
             da.Fill(dt1);
             dataGridView1.DataSource = dt1;
-            
+
+
+            //Doktorları listeye aktaran kodlar
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter da2 = new SqlDataAdapter("Select (DoktorAd+' '+DoktorSoyad) as 'Doktor Adı',DoktorBrans as 'Branşı' From Tbl_Doktorlar", bgl.baglanti());
+            da2.Fill(dt2);
+            dataGridView2.DataSource = dt2;
         }
     }
 }
