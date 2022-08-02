@@ -46,5 +46,44 @@ namespace Proje_Hastane
             da.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView1.SelectedCells[0].RowIndex;
+            TxtId.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+            TxtBrans.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+        }
+
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            //branşları silen kodlar 
+            SqlCommand komut = new SqlCommand("delete from tbl_branslar where BransId=@b1", bgl.baglanti());
+            komut.Parameters.AddWithValue("@b1", TxtId.Text);
+            komut.ExecuteNonQuery();
+            MessageBox.Show("Branş silindi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            //branşları datagridviewe getiren kodlar 
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("Select * from Tbl_Branslar", bgl.baglanti());
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            //branşları güncelleyen kodlar 
+            SqlCommand komut = new SqlCommand("update Tbl_Branslar set BransAd=@p1 where BransId=@p2", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", TxtBrans.Text);
+            komut.Parameters.AddWithValue("@p2", TxtId.Text);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Branş güncellendi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //branşları datagridviewe getiren kodlar 
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("Select * from Tbl_Branslar", bgl.baglanti());
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
     }
 }
