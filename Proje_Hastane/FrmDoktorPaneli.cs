@@ -72,11 +72,32 @@ namespace Proje_Hastane
 
         private void BtnSil_Click(object sender, EventArgs e)
         {
+            //TC'ye göre doktor bilgisini silen kodlar
             SqlCommand komut = new SqlCommand("Delete from Tbl_Doktorlar where DoktorTC=@p1", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", MskTC.Text);
             komut.ExecuteNonQuery();
             bgl.baglanti().Close();
             MessageBox.Show("Kayıt silindi","Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+
+            //Doktorları gridviewe aktaran kodlar
+            DataTable dt1 = new DataTable();
+            SqlDataAdapter da1 = new SqlDataAdapter("Select * From Tbl_Doktorlar", bgl.baglanti());
+            da1.Fill(dt1);
+            dataGridView1.DataSource = dt1;
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            //TC'ye göre doktor bilgisini güncelleyen kodlar
+            SqlCommand komut = new SqlCommand("Update Tbl_Doktorlar set DoktorAd=@d1,DoktorSoyad=@d2,DoktorBrans=@d3,DoktorSifre=@d5 where DoktorTC=@d4", bgl.baglanti());
+            komut.Parameters.AddWithValue("@d1", TxtAd.Text);
+            komut.Parameters.AddWithValue("@d2", TxtSoyad.Text);
+            komut.Parameters.AddWithValue("@d3", CmbBrans.Text);
+            komut.Parameters.AddWithValue("@d4", MskTC.Text);
+            komut.Parameters.AddWithValue("@d5", TxtSifre.Text);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Doktor güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             //Doktorları gridviewe aktaran kodlar
             DataTable dt1 = new DataTable();

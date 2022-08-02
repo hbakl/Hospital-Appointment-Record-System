@@ -106,5 +106,11 @@ namespace Proje_Hastane
             drp.Show();
 
         }
+
+        private void BtnBransPanel_Click(object sender, EventArgs e)
+        {
+            FrmBrans frb = new FrmBrans();
+            frb.Show();
+        }
     }
 }
