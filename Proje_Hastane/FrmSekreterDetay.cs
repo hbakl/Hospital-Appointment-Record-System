@@ -67,8 +67,6 @@ namespace Proje_Hastane
 
 
             //randevu listesindeki verileri rendevu panelindeki kısımlara ekleyen kodlar
-
-
             txtId.Text = RndId;
             mskTarih.Text = RndTarih;
             mskSaat.Text = RndSaat;
@@ -80,6 +78,7 @@ namespace Proje_Hastane
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
+            //randevu kaydetme kısmı
             SqlCommand komutKaydet = new SqlCommand("insert into Tbl_Randevular (RandevuTarih,RandevuSaat,RandevuBrans,RandevuDoktor) values (@r1,@r2,@r3,@r4)", bgl.baglanti());
             komutKaydet.Parameters.AddWithValue("@r1",mskTarih.Text);
             komutKaydet.Parameters.AddWithValue("@r2",mskSaat.Text);
@@ -108,6 +107,8 @@ namespace Proje_Hastane
 
         private void BtnDuyuruOlustur_Click(object sender, EventArgs e)
         {
+
+            //duyuru ekleme kısmı
             SqlCommand komut = new SqlCommand("insert into Tbl_Duyurular (Duyuru) values (@d1)", bgl.baglanti());
             komut.Parameters.AddWithValue("@d1", RchDuyuru.Text);
             komut.ExecuteNonQuery();
@@ -138,6 +139,7 @@ namespace Proje_Hastane
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
+            //randevu güncelleme kısmı
             SqlCommand komut = new SqlCommand("update Tbl_Randevular set RandevuTarih=@r1,RandevuSaat=@r2,RandevuBrans=@r3,RandevuDoktor=@r4,RandevuDurum=@r5,HastaTC=@r6 where RandevuId=@r7", bgl.baglanti());
             komut.Parameters.AddWithValue("@r1", mskTarih.Text);
             komut.Parameters.AddWithValue("@r2", mskSaat.Text);
@@ -160,6 +162,11 @@ namespace Proje_Hastane
         {
             FrmDuyurular frd = new FrmDuyurular();
             frd.Show();
+        }
+
+        private void cmbBrans_SelectedValueChanged(object sender, EventArgs e)
+        {
+            cmbDoktor.Text = "";
         }
     }
 }

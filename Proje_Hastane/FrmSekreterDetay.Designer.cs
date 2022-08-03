@@ -58,10 +58,10 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnDuyuru = new System.Windows.Forms.Button();
             this.BtnListe = new System.Windows.Forms.Button();
             this.BtnBransPanel = new System.Windows.Forms.Button();
             this.BtnDoktorPanel = new System.Windows.Forms.Button();
-            this.btnDuyuru = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -228,6 +228,7 @@
             this.cmbBrans.Size = new System.Drawing.Size(200, 36);
             this.cmbBrans.TabIndex = 8;
             this.cmbBrans.SelectedIndexChanged += new System.EventHandler(this.cmbBrans_SelectedIndexChanged);
+            this.cmbBrans.SelectedValueChanged += new System.EventHandler(this.cmbBrans_SelectedValueChanged);
             // 
             // mskSaat
             // 
@@ -364,6 +365,16 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Hızlı Erişim";
             // 
+            // btnDuyuru
+            // 
+            this.btnDuyuru.Location = new System.Drawing.Point(473, 35);
+            this.btnDuyuru.Name = "btnDuyuru";
+            this.btnDuyuru.Size = new System.Drawing.Size(142, 75);
+            this.btnDuyuru.TabIndex = 18;
+            this.btnDuyuru.Text = "Duyurular";
+            this.btnDuyuru.UseVisualStyleBackColor = true;
+            this.btnDuyuru.Click += new System.EventHandler(this.btnDuyuru_Click);
+            // 
             // BtnListe
             // 
             this.BtnListe.Location = new System.Drawing.Point(325, 35);
@@ -393,16 +404,6 @@
             this.BtnDoktorPanel.Text = "Doktor Paneli";
             this.BtnDoktorPanel.UseVisualStyleBackColor = true;
             this.BtnDoktorPanel.Click += new System.EventHandler(this.BtnDoktorPanel_Click);
-            // 
-            // btnDuyuru
-            // 
-            this.btnDuyuru.Location = new System.Drawing.Point(473, 35);
-            this.btnDuyuru.Name = "btnDuyuru";
-            this.btnDuyuru.Size = new System.Drawing.Size(142, 75);
-            this.btnDuyuru.TabIndex = 18;
-            this.btnDuyuru.Text = "Duyurular";
-            this.btnDuyuru.UseVisualStyleBackColor = true;
-            this.btnDuyuru.Click += new System.EventHandler(this.btnDuyuru_Click);
             // 
             // FrmSekreterDetay
             // 
