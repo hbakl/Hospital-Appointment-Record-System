@@ -55,13 +55,17 @@ namespace Proje_Hastane
         {
             SqlCommand komut = new SqlCommand("update Tbl_Doktorlar set DoktorAd=@p1, DoktorSoyad=@p2, DoktorBrans=@p3, DoktorSifre=@p4 where DoktorTC=@p5", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", TxtAd.Text);
-            komut.Parameters.AddWithValue("@p2", TxtSoyad.Text);
+            komut.Parameters.AddWithValue("@p2", TxtSoyad.Text.ToUpper());
             komut.Parameters.AddWithValue("@p3", CmbBrans.Text);
             komut.Parameters.AddWithValue("@p4", TxtSifre.Text);
             komut.Parameters.AddWithValue("@p5", MskTC.Text);
             komut.ExecuteNonQuery();
             bgl.baglanti().Close();
             MessageBox.Show("Bilgileriniz güncellendi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void FrmDoktoBilgiDuzenle_FormClosing(object sender, FormClosingEventArgs e)
+        {
         }
     }
 }

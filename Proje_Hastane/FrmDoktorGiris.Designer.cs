@@ -110,6 +110,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmDoktorGiris";
             this.Text = "Doktor Giriş Ekranı";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDoktorGiris_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

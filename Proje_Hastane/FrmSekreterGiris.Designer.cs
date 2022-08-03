@@ -110,6 +110,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmSekreterGiris";
             this.Text = "Sekreter Giriş Ekranı";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSekreterGiris_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

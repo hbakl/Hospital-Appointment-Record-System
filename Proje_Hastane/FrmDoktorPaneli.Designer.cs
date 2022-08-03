@@ -195,6 +195,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmDoktorPaneli";
             this.Text = "Doktor Paneli";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDoktorPaneli_FormClosing);
             this.Load += new System.EventHandler(this.FrmDoktorPaneli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

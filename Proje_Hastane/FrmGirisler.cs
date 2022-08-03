@@ -37,5 +37,15 @@ namespace Proje_Hastane
             fr.Show();
             this.Hide();
         }
+
+        private void FrmGirisler_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FrmGirisler_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

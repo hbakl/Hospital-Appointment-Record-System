@@ -111,6 +111,7 @@
             // 
             // RchSikayet
             // 
+            this.RchSikayet.Enabled = false;
             this.RchSikayet.Location = new System.Drawing.Point(5, 35);
             this.RchSikayet.Name = "RchSikayet";
             this.RchSikayet.Size = new System.Drawing.Size(335, 199);
@@ -137,6 +138,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(662, 486);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox4
             // 
@@ -149,7 +151,7 @@
             this.groupBox4.Size = new System.Drawing.Size(352, 150);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
+            this.groupBox4.Text = "Kısayollar";
             // 
             // BtnInternet
             // 
@@ -159,6 +161,7 @@
             this.BtnInternet.TabIndex = 3;
             this.BtnInternet.Text = "İnternet";
             this.BtnInternet.UseVisualStyleBackColor = true;
+            this.BtnInternet.Click += new System.EventHandler(this.BtnInternet_Click);
             // 
             // BtnCikis
             // 
@@ -168,6 +171,7 @@
             this.BtnCikis.TabIndex = 2;
             this.BtnCikis.Text = "Çıkış";
             this.BtnCikis.UseVisualStyleBackColor = true;
+            this.BtnCikis.Click += new System.EventHandler(this.BtnCikis_Click);
             // 
             // BtnDuyurular
             // 
@@ -177,6 +181,7 @@
             this.BtnDuyurular.TabIndex = 1;
             this.BtnDuyurular.Text = "Duyurular";
             this.BtnDuyurular.UseVisualStyleBackColor = true;
+            this.BtnDuyurular.Click += new System.EventHandler(this.BtnDuyurular_Click);
             // 
             // BtnGuncelle
             // 
@@ -192,6 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1071, 552);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -200,8 +206,11 @@
             this.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmDoktorDetay";
             this.Text = " Doktor Bilgi Ekranı";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDoktorDetay_FormClosing);
             this.Load += new System.EventHandler(this.FrmDoktorDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

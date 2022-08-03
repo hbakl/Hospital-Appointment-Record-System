@@ -176,6 +176,7 @@
             // 
             // BtnGuncelle
             // 
+            this.BtnGuncelle.Enabled = false;
             this.BtnGuncelle.Location = new System.Drawing.Point(6, 388);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.Size = new System.Drawing.Size(306, 43);
@@ -197,6 +198,7 @@
             // ChkDurum
             // 
             this.ChkDurum.AutoSize = true;
+            this.ChkDurum.Enabled = false;
             this.ChkDurum.Location = new System.Drawing.Point(112, 300);
             this.ChkDurum.Name = "ChkDurum";
             this.ChkDurum.Size = new System.Drawing.Size(103, 33);
@@ -206,6 +208,7 @@
             // 
             // mskTc
             // 
+            this.mskTc.Enabled = false;
             this.mskTc.Location = new System.Drawing.Point(112, 248);
             this.mskTc.Mask = "00000000000";
             this.mskTc.Name = "mskTc";
@@ -316,7 +319,7 @@
             this.groupBox4.Location = new System.Drawing.Point(679, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(504, 284);
-            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabIndex = 97;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Branşlar";
             // 
@@ -337,7 +340,7 @@
             this.groupBox5.Location = new System.Drawing.Point(679, 302);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(504, 283);
-            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabIndex = 98;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Doktorlar";
             // 
@@ -409,6 +412,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1195, 597);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
@@ -419,8 +423,10 @@
             this.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmSekreterDetay";
             this.Text = "Sekreter Detay";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSekreterDetay_FormClosing);
             this.Load += new System.EventHandler(this.FrmSekreterDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

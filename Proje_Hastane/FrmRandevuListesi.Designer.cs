@@ -58,6 +58,8 @@
             this.MaximizeBox = false;
             this.Name = "FrmRandevuListesi";
             this.Text = "Randevu Listesi";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmRandevuListesi_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmRandevuListesi_FormClosed);
             this.Load += new System.EventHandler(this.FrmRandevuListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

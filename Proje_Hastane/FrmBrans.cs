@@ -85,5 +85,9 @@ namespace Proje_Hastane
             da.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+        private void FrmBrans_FormClosing(object sender, FormClosingEventArgs e)
+        {
+        }
     }
 }

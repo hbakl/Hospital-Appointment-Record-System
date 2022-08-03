@@ -40,5 +40,9 @@ namespace Proje_Hastane
         {
 
         }
+
+        private void FrmHastaKayit_FormClosing(object sender, FormClosingEventArgs e)
+        {
+        }
     }
 }

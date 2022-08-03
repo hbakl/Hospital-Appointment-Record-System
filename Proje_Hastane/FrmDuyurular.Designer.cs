@@ -57,6 +57,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmDuyurular";
             this.Text = "Duyurular";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDuyurular_FormClosing);
             this.Load += new System.EventHandler(this.FrmDuyurular_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

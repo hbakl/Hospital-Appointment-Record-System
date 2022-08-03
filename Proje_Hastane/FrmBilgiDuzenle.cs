@@ -54,5 +54,9 @@ namespace Proje_Hastane
             bgl.baglanti().Close();
             MessageBox.Show("Bilgileriniz güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void FrmBilgiDuzenle_FormClosing(object sender, FormClosingEventArgs e)
+        {
+        }
     }
 }

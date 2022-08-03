@@ -19,13 +19,16 @@ namespace Proje_Hastane
         }
 
         sqlbaglantisi bgl = new sqlbaglantisi();
-
+        public string NTC;
+        public string NAd;
         private void FrmRandevuListesi_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("select * from Tbl_Randevular", bgl.baglanti());
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+
+
         }
 
 
@@ -50,7 +53,21 @@ namespace Proje_Hastane
             {
                 frs.RndDurum = false;
             }
+            frs.sekreterTC = NTC;
+            frs.DisableButton();
+            frs.Show();
+            this.Hide();
+        }
 
+        private void FrmRandevuListesi_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void FrmRandevuListesi_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FrmSekreterDetay frs = new FrmSekreterDetay();
+            frs.sekreterTC = NTC;
             frs.Show();
             this.Hide();
         }

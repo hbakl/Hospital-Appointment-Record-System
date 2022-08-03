@@ -17,6 +17,9 @@ namespace Proje_Hastane
         {
             InitializeComponent();
         }
+
+
+
         public string sekreterTC;
 
         public string RndId;
@@ -28,6 +31,14 @@ namespace Proje_Hastane
         public string RndTC;
 
         sqlbaglantisi bgl = new sqlbaglantisi();
+
+        public void DisableButton()
+        {
+            BtnKaydet.Enabled = false;
+            BtnGuncelle.Enabled = true;
+        }
+
+
 
         private void FrmSekreterDetay_Load(object sender, EventArgs e)
         {
@@ -88,6 +99,13 @@ namespace Proje_Hastane
             bgl.baglanti().Close();
             MessageBox.Show("Randevu başarıyla kaydedildi.");
 
+            mskTarih.Text = "";
+            mskSaat.Text = "";
+            cmbBrans.Text = "";
+            cmbDoktor.Text = "";
+            txtId.Text = "";
+            mskTc.Text = "";
+
 
         }
 
@@ -133,8 +151,10 @@ namespace Proje_Hastane
         private void BtnListe_Click(object sender, EventArgs e)
         {
             FrmRandevuListesi frr = new FrmRandevuListesi();
+            frr.NAd = LblAdSoyad.Text;
+            frr.NTC = LblTC.Text;
             frr.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
@@ -155,7 +175,17 @@ namespace Proje_Hastane
             komut.ExecuteNonQuery();
             bgl.baglanti().Close();
             MessageBox.Show("Randevu güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+
+            mskTarih.Text="";
+            mskSaat.Text = "";
+            cmbBrans.Text = "";
+            cmbDoktor.Text = "";
+            txtId.Text = "";
+            mskTc.Text = "";
+
+            BtnKaydet.Enabled = true;
+            BtnGuncelle.Enabled = false;
+
         }
 
         private void btnDuyuru_Click(object sender, EventArgs e)
@@ -167,6 +197,11 @@ namespace Proje_Hastane
         private void cmbBrans_SelectedValueChanged(object sender, EventArgs e)
         {
             cmbDoktor.Text = "";
+        }
+
+        private void FrmSekreterDetay_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

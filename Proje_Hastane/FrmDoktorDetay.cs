@@ -49,5 +49,33 @@ namespace Proje_Hastane
             frd.TC = TC;
             frd.Show();
         }
+
+        private void BtnDuyurular_Click(object sender, EventArgs e)
+        {
+            FrmDuyurular frdu = new FrmDuyurular();
+            frdu.Show();
+        }
+
+        private void BtnCikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BtnInternet_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.amansizusta.com/");
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView1.SelectedCells[0].RowIndex;
+            RchSikayet.Text = dataGridView1.Rows[secilen].Cells[7].Value.ToString();
+
+        }
+
+        private void FrmDoktorDetay_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

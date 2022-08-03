@@ -93,7 +93,6 @@
             // 
             // MskTC
             // 
-            this.MskTC.Enabled = false;
             this.MskTC.Location = new System.Drawing.Point(183, 116);
             this.MskTC.Mask = "00000000000";
             this.MskTC.Name = "MskTC";
@@ -158,6 +157,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmDoktoBilgiDuzenle";
             this.Text = "Doktor Bilgi Duzenle";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDoktoBilgiDuzenle_FormClosing);
             this.Load += new System.EventHandler(this.FrmDoktoBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

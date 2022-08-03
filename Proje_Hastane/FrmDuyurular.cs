@@ -26,5 +26,9 @@ namespace Proje_Hastane
             da.Fill(dt);
             dataGridView1.DataSource=dt;
         }
+
+        private void FrmDuyurular_FormClosing(object sender, FormClosingEventArgs e)
+        {
+        }
     }
 }

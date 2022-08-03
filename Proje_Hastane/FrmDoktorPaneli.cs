@@ -105,5 +105,9 @@ namespace Proje_Hastane
             da1.Fill(dt1);
             dataGridView1.DataSource = dt1;
         }
+
+        private void FrmDoktorPaneli_FormClosing(object sender, FormClosingEventArgs e)
+        {
+        }
     }
 }

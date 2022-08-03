@@ -35,7 +35,7 @@ namespace Proje_Hastane
 
             //TC Kimlik numarasına göre randevu geçmişini getiren kod kısmı
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Tbl_Randevular where HastaTC=" + tc, bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Tbl_Randevular where HastaTC='" + LblTC.Text + "'" , bgl.baglanti());
             da.Fill(dt);
             dataGridView1.DataSource = dt;
 
@@ -118,7 +118,7 @@ namespace Proje_Hastane
 
                 //randevu alındıktan sonra TC Kimlik numarasına göre randevu geçmişini getiren kod kısmı
                 DataTable dt4 = new DataTable();
-                SqlDataAdapter da4 = new SqlDataAdapter("Select * From Tbl_Randevular where HastaTC=" + tc, bgl.baglanti());
+                SqlDataAdapter da4 = new SqlDataAdapter("Select * From Tbl_Randevular where HastaTC='" + tc+"'", bgl.baglanti());
                 da4.Fill(dt4);
                 dataGridView1.DataSource = dt4;
             }
@@ -140,6 +140,11 @@ namespace Proje_Hastane
             }
             bgl.baglanti().Close();
             dataGridView2.DataSource = "";
+        }
+
+        private void FrmHastaDetay_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

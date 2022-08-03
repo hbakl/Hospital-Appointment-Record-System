@@ -183,6 +183,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmBilgiDuzenle";
             this.Text = "Bilgi Güncelle";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmBilgiDuzenle_FormClosing);
             this.Load += new System.EventHandler(this.FrmBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

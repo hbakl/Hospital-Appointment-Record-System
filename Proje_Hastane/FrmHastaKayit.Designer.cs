@@ -182,6 +182,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmHastaKayit";
             this.Text = "Hasta Kayıt Paneli";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmHastaKayit_FormClosing);
             this.Load += new System.EventHandler(this.FrmHastaKayit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

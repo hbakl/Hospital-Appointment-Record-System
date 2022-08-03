@@ -115,6 +115,8 @@
             this.MaximizeBox = false;
             this.Name = "FrmGirisler";
             this.Text = "Hastane Randevu Kayıt Uygulaması";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGirisler_FormClosing);
+            this.Load += new System.EventHandler(this.FrmGirisler_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

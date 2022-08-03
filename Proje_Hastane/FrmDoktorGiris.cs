@@ -41,5 +41,10 @@ namespace Proje_Hastane
             }
             bgl.baglanti().Close();
         }
+
+        private void FrmDoktorGiris_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
