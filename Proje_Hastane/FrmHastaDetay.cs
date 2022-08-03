@@ -79,5 +79,6 @@ namespace Proje_Hastane
             fr.TCno = LblTC.Text;
             fr.Show();
         }
+
     }
 }

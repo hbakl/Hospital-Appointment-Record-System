@@ -27,5 +27,32 @@ namespace Proje_Hastane
             da.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView1.SelectedCells[0].RowIndex;
+
+            FrmSekreterDetay frs = new FrmSekreterDetay();
+
+            frs.RndId = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+            frs.RndTarih = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+            frs.RndSaat = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
+            frs.RndBrans = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+            frs.RndDoktor = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
+            frs.RndTC = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
+            //bool değişkeni durumuna göre bir yerde veri girmek için bu şekilde kodu yazıyoruz.
+            if ((bool)dataGridView1.Rows[secilen].Cells[5].Value)
+            {
+                frs.RndDurum = true;
+            }
+            else
+            {
+                frs.RndDurum = false;
+            }
+
+            frs.Show();
+            this.Hide();
+        }
     }
 }

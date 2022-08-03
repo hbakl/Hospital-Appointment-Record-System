@@ -19,6 +19,14 @@ namespace Proje_Hastane
         }
         public string sekreterTC;
 
+        public string RndId;
+        public string RndTarih;
+        public string RndSaat;
+        public string RndBrans;
+        public string RndDoktor;
+        public bool RndDurum;
+        public string RndTC;
+
         sqlbaglantisi bgl = new sqlbaglantisi();
 
         private void FrmSekreterDetay_Load(object sender, EventArgs e)
@@ -58,13 +66,21 @@ namespace Proje_Hastane
             bgl.baglanti().Close();
 
 
+            //randevu listesindeki verileri rendevu panelindeki kısımlara ekleyen kodlar
 
 
-        }
+            txtId.Text = RndId;
+            mskTarih.Text = RndTarih;
+            mskSaat.Text = RndSaat;
+            cmbBrans.Text = RndBrans;
+            cmbDoktor.Text = RndDoktor;
+            ChkDurum.Checked = RndDurum;
+            mskTc.Text = RndTC;
+    }
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-            SqlCommand komutKaydet = new SqlCommand("insert into Tbl_Randevular (RandevuTarih,RandevuSaat,RandevuBrans,RandevuDoktor) values (@r2,@r2,@r3,@r4)", bgl.baglanti());
+            SqlCommand komutKaydet = new SqlCommand("insert into Tbl_Randevular (RandevuTarih,RandevuSaat,RandevuBrans,RandevuDoktor) values (@r1,@r2,@r3,@r4)", bgl.baglanti());
             komutKaydet.Parameters.AddWithValue("@r1",mskTarih.Text);
             komutKaydet.Parameters.AddWithValue("@r2",mskSaat.Text);
             komutKaydet.Parameters.AddWithValue("@r3",cmbBrans.Text);
@@ -117,6 +133,27 @@ namespace Proje_Hastane
         {
             FrmRandevuListesi frr = new FrmRandevuListesi();
             frr.Show();
+            this.Close();
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("update Tbl_Randevular set RandevuTarih=@r1,RandevuSaat=@r2,RandevuBrans=@r3,RandevuDoktor=@r4,RandevuDurum=@r5,HastaTC=@r6 where RandevuId=@r7", bgl.baglanti());
+            komut.Parameters.AddWithValue("@r1", mskTarih.Text);
+            komut.Parameters.AddWithValue("@r2", mskSaat.Text);
+            komut.Parameters.AddWithValue("@r3", cmbBrans.Text);
+            komut.Parameters.AddWithValue("@r4", cmbDoktor.Text);
+            komut.Parameters.AddWithValue("@r7", txtId.Text);
+            komut.Parameters.AddWithValue("@r6", mskTc.Text);
+
+
+            komut.Parameters.AddWithValue("@r5", ChkDurum.Checked.ToString());
+
+
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Randevu güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
     }
 }
