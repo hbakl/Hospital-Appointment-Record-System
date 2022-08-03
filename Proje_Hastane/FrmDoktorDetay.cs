@@ -34,6 +34,20 @@ namespace Proje_Hastane
                 LblAdSoyad.Text = dr[0] + " " + dr[1];
             }
             bgl.baglanti().Close();
+
+
+            //Doktora ait randevuları datagridviewe getiren kodlar.
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("select * from Tbl_Randevular where RandevuDoktor='" + LblAdSoyad.Text + "'", bgl.baglanti());
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            FrmDoktoBilgiDuzenle frd = new FrmDoktoBilgiDuzenle();
+            frd.TC = TC;
+            frd.Show();
         }
     }
 }

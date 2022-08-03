@@ -50,6 +50,7 @@
             this.BtnBilgiGuncelle.TabIndex = 44;
             this.BtnBilgiGuncelle.Text = "Güncelle";
             this.BtnBilgiGuncelle.UseVisualStyleBackColor = true;
+            this.BtnBilgiGuncelle.Click += new System.EventHandler(this.BtnBilgiGuncelle_Click);
             // 
             // TxtAd
             // 
@@ -92,6 +93,7 @@
             // 
             // MskTC
             // 
+            this.MskTC.Enabled = false;
             this.MskTC.Location = new System.Drawing.Point(183, 116);
             this.MskTC.Mask = "00000000000";
             this.MskTC.Name = "MskTC";
@@ -137,6 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(349, 305);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.CmbBrans);
@@ -152,8 +155,10 @@
             this.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmDoktoBilgiDuzenle";
             this.Text = "Doktor Bilgi Duzenle";
+            this.Load += new System.EventHandler(this.FrmDoktoBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
