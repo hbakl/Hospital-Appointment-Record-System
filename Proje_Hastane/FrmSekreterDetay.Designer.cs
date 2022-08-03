@@ -61,6 +61,7 @@
             this.BtnListe = new System.Windows.Forms.Button();
             this.BtnBransPanel = new System.Windows.Forms.Button();
             this.BtnDoktorPanel = new System.Windows.Forms.Button();
+            this.btnDuyuru = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -352,6 +353,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.btnDuyuru);
             this.groupBox6.Controls.Add(this.BtnListe);
             this.groupBox6.Controls.Add(this.BtnBransPanel);
             this.groupBox6.Controls.Add(this.BtnDoktorPanel);
@@ -364,7 +366,7 @@
             // 
             // BtnListe
             // 
-            this.BtnListe.Location = new System.Drawing.Point(302, 35);
+            this.BtnListe.Location = new System.Drawing.Point(325, 35);
             this.BtnListe.Name = "BtnListe";
             this.BtnListe.Size = new System.Drawing.Size(142, 75);
             this.BtnListe.TabIndex = 17;
@@ -374,7 +376,7 @@
             // 
             // BtnBransPanel
             // 
-            this.BtnBransPanel.Location = new System.Drawing.Point(154, 35);
+            this.BtnBransPanel.Location = new System.Drawing.Point(177, 35);
             this.BtnBransPanel.Name = "BtnBransPanel";
             this.BtnBransPanel.Size = new System.Drawing.Size(142, 75);
             this.BtnBransPanel.TabIndex = 16;
@@ -384,13 +386,23 @@
             // 
             // BtnDoktorPanel
             // 
-            this.BtnDoktorPanel.Location = new System.Drawing.Point(6, 35);
+            this.BtnDoktorPanel.Location = new System.Drawing.Point(29, 35);
             this.BtnDoktorPanel.Name = "BtnDoktorPanel";
             this.BtnDoktorPanel.Size = new System.Drawing.Size(142, 75);
             this.BtnDoktorPanel.TabIndex = 15;
             this.BtnDoktorPanel.Text = "Doktor Paneli";
             this.BtnDoktorPanel.UseVisualStyleBackColor = true;
             this.BtnDoktorPanel.Click += new System.EventHandler(this.BtnDoktorPanel_Click);
+            // 
+            // btnDuyuru
+            // 
+            this.btnDuyuru.Location = new System.Drawing.Point(473, 35);
+            this.btnDuyuru.Name = "btnDuyuru";
+            this.btnDuyuru.Size = new System.Drawing.Size(142, 75);
+            this.btnDuyuru.TabIndex = 18;
+            this.btnDuyuru.Text = "Duyurular";
+            this.btnDuyuru.UseVisualStyleBackColor = true;
+            this.btnDuyuru.Click += new System.EventHandler(this.btnDuyuru_Click);
             // 
             // FrmSekreterDetay
             // 
@@ -457,5 +469,6 @@
         private System.Windows.Forms.Button BtnListe;
         private System.Windows.Forms.Button BtnBransPanel;
         private System.Windows.Forms.Button BtnDoktorPanel;
+        private System.Windows.Forms.Button btnDuyuru;
     }
 }

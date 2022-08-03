@@ -155,5 +155,11 @@ namespace Proje_Hastane
             MessageBox.Show("Randevu güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             
         }
+
+        private void btnDuyuru_Click(object sender, EventArgs e)
+        {
+            FrmDuyurular frd = new FrmDuyurular();
+            frd.Show();
+        }
     }
 }
