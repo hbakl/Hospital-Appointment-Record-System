@@ -25,7 +25,7 @@ namespace Proje_Hastane
         {
             //branşları datagridviewe getiren kodlar 
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from Tbl_Branslar", bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("Select BransID as 'Branş No', BransAd as 'Branş Adı' from Tbl_Branslar", bgl.baglanti());
             da.Fill(dt);
             dataGridView1.DataSource = dt;
 
@@ -88,6 +88,11 @@ namespace Proje_Hastane
 
         private void FrmBrans_FormClosing(object sender, FormClosingEventArgs e)
         {
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

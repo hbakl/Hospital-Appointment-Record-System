@@ -22,9 +22,9 @@ namespace Proje_Hastane
 
         private void FrmDoktorPaneli_Load(object sender, EventArgs e)
         {
-            //Doktorları gridviewe aktaran kodlar
+            //Doktorları gridviewe aktaran kodlar no ad soyad branş tc şifre
             DataTable dt1 = new DataTable();
-            SqlDataAdapter da1 = new SqlDataAdapter("Select * From Tbl_Doktorlar", bgl.baglanti());
+            SqlDataAdapter da1 = new SqlDataAdapter("Select DoktorID as 'Doktor No', DoktorAd as 'Adı',DoktorSoyad as 'Soyadı', DoktorBrans as 'Branşı',DoktorTC as 'TC', DoktorSifre as 'Şifre' from Tbl_Doktorlar", bgl.baglanti());
             da1.Fill(dt1);
             dataGridView1.DataSource = dt1;
 
